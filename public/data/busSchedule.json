@@ -1,41 +1,38 @@
 {
-	"categories": {
-		"Weekday": {
-			"toCampus": ["07:30", "08:15", "09:00", "12:30", "17:45"],
-			"fromCampus": ["08:45", "13:15", "18:30", "21:00"]
-		},
-		"SatHoliday": {
-			"toCampus": [
-				"09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30",
-				"13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30",
-				"17:00","17:30","18:00","18:00","18:30","19:00","19:30","20:00",
-				"20:30","21:00","22:00","23:00","24:00"
-			],
-			"fromCampus": [
-				"08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30",
-				"13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30",
-				"18:00","18:00","18:30","19:00","19:30","20:15","21:15","22:15","23:15"
-			]
-		},
-		"Sunday": {
-			"toCampus": [
-				"08:45","10:00","11:00","12:00","12:30","13:15","14:00","15:00","16:00","17:00",
-				"18:00","18:30","19:00","19:30","20:00","20:30","21:00","22:00","23:00","24:00"
-			],
-			"fromCampus": [
-				"08:00","08:30","09:00","10:15","11:15","12:15","12:45","13:30","14:15","15:15",
-				"16:15","17:15","18:00","18:30","19:00","19:30","20:15","21:15","22:15","23:15"
-			]
-		}
-	},
-	"specials": [
-		{"label": "Palakkad Town Route 6 Outbound", "time": "13:00", "note": "Sahyadri -> ... -> Palakkad 13:30"},
-		{"label": "Palakkad Town Return", "time": "13:30", "note": "Stadium Bus Stand -> ... -> Saraswati 14:00"},
-		{"label": "Wise Park Morning", "time": "08:45", "note": "Nila 8:45 – WPJ 9:00 – Manogata 9:15 – Sahyadri 9:30"},
-		{"label": "Wise Park Evening", "time": "18:15", "note": "Sahyadri 18:15 – WPJ 18:45 – Manogata 19:00"}
-	],
-	"_notes": {
-		"SatHoliday": "Applies to Saturdays and Monday–Friday institute holidays. Duplicate 18:00 entries preserved from source list.",
-		"timeFormat": "24h with 24:00 used for final midnight departure (source listed as 12:00). Adjust as needed." 
-	}
+  "categories": {
+    "working": {
+      "routes": {
+        "Nila → Sahyadri": ["8:30", "9:25", "9:45", "10:20", "10:45", "11:15", "11:50", "12:15", "12:30", "1:00", "1:30", "1:45", "2:15", "2:45", "3:20", "3:45", "4:30", "5:00", "5:15", "5:45", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "10:00", "11:00", "11:00", "12:00"],
+        "Sahyadri → Nila": ["7:45", "8:15", "8:30", "8:45", "9:00", "9:25", "9:45", "10:20", "10:45", "11:15", "11:50", "12:15", "12:30", "1:00", "1:30", "1:45", "2:15", "2:45", "3:20", "3:45", "4:30", "5:00", "5:15", "5:45", "6:00", "6:30", "7:00", "7:30", "8:00", "9:15", "10:15", "11:15", "11:15"]
+      }
+    },
+    "saturday": {
+      "routes": {
+        "Nila → Sahyadri": ["9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00", "5:30", "6:00", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "10:00", "11:00", "12:00"],
+        "Sahyadri → Nila": ["8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00", "5:30", "6:00", "6:00", "6:30", "7:00", "7:30", "8:15", "9:15", "10:15", "11:15"]
+      }
+    },
+    "sunday": {
+      "routes": {
+        "Nila → Sahyadri": ["8:45", "10:00", "11:00", "12:00", "12:30", "1:15", "2:00", "3:00", "4:00", "5:00", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "10:00", "11:00", "12:00"],
+        "Sahyadri → Nila": ["8:00", "8:30", "9:00", "10:15", "11:15", "12:15", "12:45", "1:30", "2:15", "3:15", "4:15", "5:15", "6:00", "6:30", "7:00", "7:30", "8:15", "9:15", "10:15", "11:15"]
+      }
+    }
+  },
+  "specials": {
+    "palakkadTown": [
+      "Nila Gate : 7:40 AM. Palakkad 8.25 AM – Kadamkode – Manapullykavu – Maidaan (Govt. Hospital) – Stadium Bus Stand – Kalamandapam – Chandranagar – Pudussery – Nila Gate – Sahyadri 8:55 AM",
+      "Nila Gate: 7:55 AM. Kalleppulley: 8.25 AM – Koppam – Sekharipuram – Mattumantha – Malampuza – Nila Gate – Sahyadri 8:55 AM",
+      "Palakkad 8.00 AM – Kadamkode – Manapullykavu – Maidaan (Govt. Hospital) – Stadium Bus Stand –Kalamandapam – Chandranagar – Pudussery – Nila Gate – Sahyadri 8.30 AM",
+      "Sahyadri 5:10 PM – Nila Gate– Pudussery – Kadamkode – Manapullykavu – Maidaan (Govt. Hospital) – Stadium Bus Stand – Palakkad 5:40 PM. Stadium Bus Stand 5:45 PM – Chandranagar – Pudussery – Nila.",
+      "Sahyadri 5:20 PM – Nila Manogata – Malampuzha Road – Mattumantha – Sekharipuram – Koppam – Kalleppulley 5.55 PM. Sekharipuram 5.50 PM – Chandranagar – Pudussery – Nila",
+      "Sahyadri 1:00 PM – Nila Gate– Pudussery – Kadamkode – Manapullykavu – Maidaan (Govt. Hospital) – Stadium Bus Stand – Palakkad 1:30 PM. Stadium Bus Stand 1:30 PM – Chandranagar – Pudussery – Nila – Saraswati 2:00 PM."
+    ],
+    "wisePark": [
+      "Nila 8:15 AM – Wise Park Junction 8:30 AM – Nila Manogata 8:45 am – Sahyadri 9:00 AM (service roads only)",
+      "Sahyadri 6:15 PM– Nila Gate – Wise Park junction 6:45 PM – Nila Manogata 7:00 PM (service roads only)",
+      "Nila 8:45 AM – Wise Park Junction 9:00 am – Nila Manogata 9:15 am – Sahyadri 9:30 AM (service roads only)",
+      "Sahyadri 6:15 PM – Nila gate –Wise Park Junction 6:45 pm – Nila Manogata 7:00 PM"
+    ]
+  }
 }
