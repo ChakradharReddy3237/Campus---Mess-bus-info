@@ -1,80 +1,85 @@
-# Campus Dashboard
+# Campus Mess & Bus Dashboard (Static Edition)
 
-A React-based dashboard for displaying campus mess menu and bus schedules with email integration.
+Static React site that loads `public/data/menuCycle.json` and `public/data/busSchedule.json` then persists any browser‑side edits (future UI) to `localStorage`. No server – every visitor has their own personal data copy.
 
-## Features
+## Why Static?
+You selected the simple path: public read + personal per‑browser edits. This avoids hosting costs and backend complexity. Data resets per user if they clear site storage or open in a new device.
 
-- **Manual Data Entry**: Copy and paste menu and bus schedule data
-- **Email Integration**: Automatically fetch updates from specific email addresses
-- **Local Storage**: Data persists between sessions
-- **Responsive Design**: Works on desktop, tablet, and mobile
+## Quick Start (Local)
+1. Install deps: `npm install`
+2. Run dev server: `npm start`
+3. Build production: `npm run build`
+4. Preview build: `npm run preview`
 
-## Email Integration Setup
-
-### Gmail Integration
-1. Create a Google Cloud Project
-2. Enable Gmail API
-3. Create OAuth2 credentials
-4. Add your domain to authorized origins
-5. Set `REACT_APP_GMAIL_CLIENT_ID` environment variable
-
-### Outlook Integration
-1. Register app in Azure AD
-2. Configure Mail.Read permissions
-3. Set redirect URI to your domain
-4. Add Microsoft Authentication Library (MSAL)
-
-### Usage
-1. Click "⚙️ Email" button in header
-2. Enable email integration
-3. Enter the sender's email address
-4. Set refresh interval (how often to check for new emails)
-5. Authorize access to your email account
-
-The app will automatically check for new emails from the specified sender and update the dashboard when new menu or bus schedule information is found.
-
-## Data Format
-
-### JSON Driven (Recommended)
-
-You no longer need to edit source code to change the 4‑week mess cycle or bus timings.
-
-Edit the JSON files in `public/data`:
-
-* `menuCycle.json` – full 4‑week structure (week13 = weeks 1 & 3, week24 = weeks 2 & 4). Update `startDate` (a Monday) when a new cycle begins.
-* `busSchedule.json` – category based bus times: `working`, `saturday`, `sunday` plus `specials` (`palakkadTown`, `wisePark`).
-
-After saving changes, just refresh the browser (hard refresh Ctrl+Shift+R) – data is fetched at load time unless overridden by data you pasted (which is stored in localStorage). To clear overrides, use the Reset button or clear the site storage in your browser dev tools.
-
-### Legacy Paste Format
-
-When copying and pasting data, use this format:
-
+## File Structure (Core)
 ```
-Breakfast: Idly, Vada, Sambar, Coconut Chutney
-Lunch: Rice, Dal, Vegetable Curry, Sambar
-Snacks: Tea, Biscuits
-Dinner: Chapati, Paneer Curry, Rice
-
-Buses:
-Nila → Sahyadri: 9:00 PM, 10:00 PM, 11:00 PM
-Sahyadri → Nila: 9:15 PM, 10:15 PM, 7:30 AM
+public/
+	index.html
+	data/
+		menuCycle.json        # initial menu cycle (static seed)
+		busSchedule.json      # initial bus schedule (static seed)
+src/
+	index.js                # React root
+	App.js                  # Loads + displays raw JSON (placeholder UI)
+	App.css                 # Base styling
 ```
 
-## Development
+## Editing Data (Current Minimal State)
+Right now the UI just shows raw JSON. In the prior interactive build you had chip editors; you can port them back into this simplified scaffold if desired. Local changes are saved automatically to `localStorage` key `campusData_v1`.
 
-```bash
-npm install
-npm start
+To reset data: Open DevTools > Application > Local Storage > remove the key or run:
+`localStorage.removeItem('campusData_v1')`
+
+## Deploy on Render (Static Site)
+1. Push repo to GitHub.
+2. In Render: New + Static Site.
+3. Select repo & branch (e.g. main).
+4. Build Command: `npm install && npm run build`
+5. Publish Directory: `build`
+6. (Optional) Set Node version in Render settings (e.g. 18).
+7. Save – Render builds and serves the static bundle.
+
+Future changes: push to branch → automatic redeploy.
+
+## Deploy on GitHub Pages (Alternative)
+1. `npm install gh-pages --save-dev`
+2. Add to package.json:
+	 ```json
+	 "homepage": "https://<user>.github.io/<repo>",
+	 "scripts": {
+		 "predeploy": "npm run build",
+		 "deploy": "gh-pages -d build"
+	 }
+	 ```
+3. Run: `npm run deploy`
+
+## Adding Back Advanced Editors
+Port your earlier components (`AdvancedMenuEditor`, `BusEditorModal`, etc.) into `App.js` layout. Replace the raw `<pre>` sections with those components and maintain the same persistence calls. Keep fetch seed pattern for first visit.
+
+## Roadmap (Optional)
+- Events panel (client only) seeded via another JSON.
+- Export/Import button allowing user to backup their personal data.
+- Theming toggle (dark/light) using CSS variables.
+
+## Current Features
+- Mess menu viewer with week/day navigation and meals grid.
+- Bus schedule viewer with category tabs, direction toggle, hide past times option, and next bus countdown.
+- Unified Update Data modal containing:
+	- Advanced Menu Editor (week tabs, meal/day selection, common items propagate to all days).
+	- Bus Editor (category creation, time chips, specials list).
+	- Import JSON panel (paste structure to overwrite data locally).
+- Local persistence via `localStorage` (per-browser, no server).
+- Responsive adaptive card/grid layout.
+
+## JSON Structures
+Menu sample:
+```json
+{ "startDate": "2025-10-06", "weeks": [ { "week": 1, "days": [ { "day": "Mon", "meals": { "breakfast": ["Idli"] } } ] } ] }
+```
+Bus sample:
+```json
+{ "categories": { "Weekday": { "toCampus": ["07:30"], "fromCampus": ["08:45"] } }, "specials": [{ "label": "Late Night", "time": "23:00" }] }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Environment Variables
-
-Create a `.env` file in the root directory:
-
-```
-REACT_APP_GMAIL_CLIENT_ID=your_gmail_client_id_here
-REACT_APP_OUTLOOK_CLIENT_ID=your_outlook_client_id_here
-```
+## License
+Private / internal. Add a license if you plan to open source.

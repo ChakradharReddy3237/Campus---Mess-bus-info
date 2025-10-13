@@ -1,32 +1,26 @@
-const STORAGE_KEY = 'campus-dashboard:data:v1';
-const EMAIL_SETTINGS_KEY = 'campus-dashboard:email-settings:v1';
+const KEY = 'campusData_v1';
 
 export function loadData() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
+	try {
+		const raw = localStorage.getItem(KEY);
+		if (!raw) return {};
+		return JSON.parse(raw) || {};
+	} catch (e) {
+		console.warn('Failed to parse stored data', e);
+		return {};
+	}
 }
 
-export function saveData(data) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch {}
+export function saveData(partial) {
+	try {
+		const prev = loadData();
+		const merged = { ...prev, ...partial };
+		localStorage.setItem(KEY, JSON.stringify(merged));
+		return true;
+	} catch (e) {
+		console.error('Failed to save data', e);
+		return false;
+	}
 }
 
-export function loadEmailSettings() {
-  try {
-    const raw = localStorage.getItem(EMAIL_SETTINGS_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-export function saveEmailSettings(settings) {
-  try {
-    localStorage.setItem(EMAIL_SETTINGS_KEY, JSON.stringify(settings));
-  } catch {}
-}
+export function clearData() { localStorage.removeItem(KEY); }

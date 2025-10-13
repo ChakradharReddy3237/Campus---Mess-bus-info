@@ -1,110 +1,29 @@
 {
-  "type": "4-week",
-  "startDate": "2025-10-06",
-  "weeks": {
-    "week13": {
-      "common": {
-        "breakfast": "bread, butter, jam, milk, tea, coffee, sprouts/chana, seasonal fruits",
-        "lunch": "Pickle, papad, mix salad, Onion, White rice, Lemon, Ghee",
-        "snacks": "tea, coffee, sugar",
-        "dinner": "Appalam, Mixed Salad, Pickle (Mango/Chili/Mix)"
-      },
-      "days": {
-        "monday": {
-          "breakfast": "Aloo paratha, Ketchup, Curd, Non-Veg: Boiled Egg; Veg: Pineapple, Mint & Corriander Chutney",
-          "lunch": "Puri, Chana masala, Toor dal fry, Mix veg curry, Seasonal fruit (watermelon), Kerala rice, curd & sugar",
-          "snacks": "Instant noodles, Tomato ketchup",
-          "dinner": "Veg: Mutter Paneer Masala, Non-Veg: Egg Gravy, White Rice, Chana dal tadka, Chapati, Makkan Peda"
-        },
-        "tuesday": {
-          "breakfast": "Pongal, vada, Ground nut Chutney, Non-Veg: Omelette; Veg: Orange",
-          "lunch": "Payasam dry, sambar, Aloo Gobhi curry, Fresh Fruit Juice, Kerala rice, Chapathi",
-          "snacks": "Fresh fruit salad, Lemon juice (No milk, coffee and tea)",
-          "dinner": "Arhar Dal tadka, Aloo 65, Kadhi Pakoda, White rice, Chapati, kheer"
-        },
-        "wednesday": {
-          "breakfast": "Masala Dosa, Tomato Chutney, Sambar, Non-Veg: Boiled Egg; Veg: Banana, peanut butter",
-          "lunch": "Baigan masala, Sambar, cabbage tomato curry, chapathi, Kerala rice, spiced buttermilk",
-          "snacks": "Masala Channa",
-          "dinner": "Veg: Hyderabad Paneer Dish, Non-Veg: Hyderabad Style Chicken masala, white rice, Moong dal, Lachcha Paratha, Laddu, Lemon"
-        },
-        "thursday": {
-          "breakfast": "Puri, Semi-dry black Chana masala, Non-Veg: Omelette; Veg: Pineapple",
-          "lunch": "Soya Masala, Rasam, Tomato rice, Onion Raita, Palak Chapati",
-          "snacks": "Tikki chat",
-          "dinner": "Bisi bele bath, Yam with chana dry, chapathi, aloo matar curry, Rasam, White rice, icecream"
-        },
-        "friday": {
-          "breakfast": "Idly, Vada, sambar, coconut chutney, Non-veg: Boiled egg; Veg: Banana",
-          "lunch": "Rajma masala, Bottle Gourd Sambar, Kerala rice, Phulka, Minty Buttermilk",
-          "snacks": "Pungulu with coconut chutney",
-          "dinner": "Non Veg: Chicken Gravy; Veg: Paneer Butter masala, pulao, Mix dal, Chapathi, Kesari(Rawa), mango pickle, Lemon"
-        },
-        "saturday": {
-          "breakfast": "Gobi Mix Veg Paratha, Green Coriander chutney, Peanut Butter, Non Veg: Boiled Egg; Veg: Musk Melon",
-          "lunch": "Drum Stick-Tomato gravy, Dal Makhni, Fried aloo, Phulka, Rasam, curd & sugar",
-          "snacks": "Mirchi bajji, Chutney, Cold Coffee",
-          "dinner": "Dal makhani, Aviyal; mushroom masala, Tomato rice, Phulka, custard"
-        },
-        "sunday": {
-          "breakfast": "Onion Rava dosa, Tomato chutney, Sambhar, Non-Veg: Boiled egg; Veg: Guava",
-          "lunch": "Non-Veg: Chicken Butter Masala; Veg: Paneer - Semi Dry; Chana, Chapati, Veg Biryani, Raita, Fresh Fruit Juice",
-          "snacks": "Vada Pav",
-          "dinner": "Aloo Masala, Poori, Green vegetables with beans, Arhar Daltadka, White Rice, gulab jamun"
-        }
-      }
-    },
-    "week24": {
-      "common": {
-        "breakfast": "bread, butter, jam, milk, tea, coffee, sprouts/chana, seasonal fruits",
-        "lunch": "Pickle ,papad,mix salad, Onion, White rice, Lemon, Ghee",
-        "snacks": "tea, coffee, sugar",
-        "dinner": "Appalam, Mixed Salad, Pickle (Mango/Chili/Mix)"
-      },
-      "days": {
-        "monday": {
-          "breakfast": "Aloo paratha, Ketchup, Curd, Non-Veg: Boiled Egg; Veg: Pineapple, Mint & Corriander Chutney",
-          "lunch": "Chola Bhatura, Toor dal fry, watermelon, Veg Jalfrezi, Lemon rice, Curd & sugar",
-          "snacks": "Macroni",
-          "dinner": "Veg: Paneer Biryani, Non-Veg: Egg Biryani, Raita ,Mutter masala, Chana dal tadka, Phulka, Makkan Peda, White rice"
-        },
-        "tuesday": {
-          "breakfast": "Upma, Coconut chutney, Non-Veg: Boiled egg; Veg: Orange",
-          "lunch": "Sambar, Kadai Veg gravy, Bittergourd curry, Kerala rice, Chapathi, Fresh Fruit Juice",
-            "snacks": "Bread Bajjii and sauce",
-          "dinner": "Arhar Dal tadka, Aloo 65, White rice, Kadhi Pakoda, Chapati, Dal paysam"
-        },
-        "wednesday": {
-          "breakfast": "Vegetable Uttapam, Coconut Chutney, Sambar, Non-Veg: Boiled egg; Veg: Guava, peanut butter",
-          "lunch": "Sambar, Dondakaya fry with peanuts, Malai Kofta, Kerala rice, Chapathi, spiced buttermilk",
-          "snacks": "Grilled Sandwich,Tomato ketchup",
-          "dinner": "Veg: Mutter paneer masala, Non-Veg: Hyderabad Style Chicken masala, white rice, Moong dal, Lachcha Paratha, Laddu, Lemon"
-        },
-        "thursday": {
-          "breakfast": "Puri, Semi-dry black Chana masala, Non-Veg: Omelette; Veg: Pineapple",
-          "lunch": "Soya Masala, Onion Raita, Rasam, Tomato rice, Palak Chapati, Minty Buttermilk",
-          "snacks": "Cutlet & Tomato Ketchup",
-          "dinner": "Bisi bele bath, Yam with chana dry, chapathi, aloo matar curry, Rasam,White rice, icecream"
-        },
-        "friday": {
-          "breakfast": "Fried Idly, Vada, coconut chutney, Non-Veg: Boiled Egg; Veg: Banana",
-          "lunch": "Musturd raw banana gravy, Rajma masala , Bottle Guard Sambar, Kerala rice, Phulka, Curd & Sugar",
-          "snacks": "Pani Puri",
-          "dinner": "Non Veg: Chicken Gravy; Veg: Paneer Butter masala, pulao, Mix dal, Chapathi, Kesari(Rawa), mango pickle, Lemon"
-        },
-        "saturday": {
-          "breakfast": "Semiya kichadi, Groundnut-Chutney, Peanut Butter, Non-veg: Omelette, Veg: Musk Melon",
-          "lunch": "Dal Makhni, Drum stick + tomato, Jeera Aloo, Phulka, Rasam, curd & sugar",
-          "snacks": "Samosa, Tomato ketchup, Cold Coffee",
-          "dinner": "Dal makhani, Aviyal, Babycorn masala, Phulka, Tomato Rice, Kheer"
-        },
-        "sunday": {
-          "breakfast": "Podi Dosa, Coconut Chutney, Sambar, Non-Veg: Boiled Egg; Veg: Banana",
-          "lunch": "Biriyani rice, Non-Veg: Chicken 65, Veg: Gobhi 65, Chana dal tadka, Raita, Fresh Fruit Juice",
-          "snacks": "Pav Bhaji",
-          "dinner": "Aloo masala, poori, Arhar Daltadka, White rice, Curd rice, gulab jamun"
-        }
-      }
-    }
-  }
+	"startDate": "2025-10-06",
+	"weeks": [
+		{
+			"week": 1,
+			"days": [
+				{"day": "Mon", "meals": {"breakfast": ["Idli", "Sambar"], "lunch": ["Rice", "Dal", "Veg Curry"], "snacks": ["Tea", "Biscuits"], "dinner": ["Chapati", "Paneer"]}},
+				{"day": "Tue", "meals": {"breakfast": ["Poha"], "lunch": ["Rice", "Rasam"], "snacks": ["Tea"], "dinner": ["Fried Rice"]}},
+				{"day": "Wed", "meals": {"breakfast": ["Dosa"], "lunch": ["Curd Rice"], "snacks": ["Tea"], "dinner": ["Chapati", "Mixed Veg"]}},
+				{"day": "Thu", "meals": {"breakfast": ["Upma"], "lunch": ["Rice", "Dal Fry"], "snacks": ["Tea"], "dinner": ["Noodles"]}},
+				{"day": "Fri", "meals": {"breakfast": ["Poori", "Aloo"], "lunch": ["Rice", "Sambar"], "snacks": ["Tea"], "dinner": ["Veg Biryani"]}},
+				{"day": "Sat", "meals": {"breakfast": ["Pongal"], "lunch": ["Rice", "Chole"], "snacks": ["Tea"], "dinner": ["Fried Rice"]}},
+				{"day": "Sun", "meals": {"breakfast": ["Idli"], "lunch": ["Rice", "Dal"], "snacks": ["Tea"], "dinner": ["Dosa"]}}
+			]
+		},
+		{
+			"week": 2,
+			"days": [
+				{"day": "Mon", "meals": {"breakfast": ["Pesarattu"], "lunch": ["Rice", "Dal Tadka"], "snacks": ["Tea"], "dinner": ["Chapati", "Kofta"]}},
+				{"day": "Tue", "meals": {"breakfast": ["Idli"], "lunch": ["Rice", "Veg Curry"], "snacks": ["Tea"], "dinner": ["Veg Pulao"]}},
+				{"day": "Wed", "meals": {"breakfast": ["Upma"], "lunch": ["Curd Rice"], "snacks": ["Tea"], "dinner": ["Paratha", "Dal"]}},
+				{"day": "Thu", "meals": {"breakfast": ["Poha"], "lunch": ["Rice", "Rasam"], "snacks": ["Tea"], "dinner": ["Veg Biryani"]}},
+				{"day": "Fri", "meals": {"breakfast": ["Dosa"], "lunch": ["Rice", "Sambar"], "snacks": ["Tea"], "dinner": ["Chowmein"]}},
+				{"day": "Sat", "meals": {"breakfast": ["Pongal"], "lunch": ["Rice", "Dal"], "snacks": ["Tea"], "dinner": ["Chapati", "Paneer"]}},
+				{"day": "Sun", "meals": {"breakfast": ["Poori", "Aloo"], "lunch": ["Rice", "Veg Curry"], "snacks": ["Tea"], "dinner": ["Fried Rice"]}}
+			]
+		}
+	]
 }
